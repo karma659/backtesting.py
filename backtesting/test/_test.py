@@ -173,7 +173,6 @@ class TestBacktest(TestCase):
                 self.position.is_long
 
                 if crossover(self.sma, self.data.Close):
-                    self.orders.cancel()  # cancels only non-contingent
                     price = self.data.Close[-1]
                     sl, tp = 1.05 * price, .9 * price
 
